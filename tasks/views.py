@@ -7,3 +7,7 @@ def Contact(Request):
     return HttpResponse("<button style='color: blue'>This is Contact Page</button>")
 def Show_Tasks(request):
     return HttpResponse("You Can show all the taksk here")
+def show_specific_task(request, id):
+    print("id", id)
+    print("id type", type(id))
+    return HttpResponse(f"This is specific task page {id}")
