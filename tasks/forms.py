@@ -23,11 +23,11 @@ class TaskModelForm(forms.ModelForm):
         #we can use exclude, when we will have many fields and we do not need some fields, then we can write those some names and others will automatically be added
         widgets ={
             'tilte' : forms.TextInput(attrs={
-                'class' : "w-1/2 border-blue-500  border-2 bg-blue-100",
+                'class' : "w-full border-blue-500  border-2 bg-blue-100",
                 'placeholder' : "Enter the title"
             }),
             'description' : forms.Textarea(attrs={
-                'class' : " mt-2 border-blue-500 border-2 bg-blue-100",
+                'class' : "w-full mt-2 border-blue-500 border-2 bg-blue-100",
                 'placeholder' : "Enter the Description"
             }),
             'due_date': forms.SelectDateWidget(attrs={
