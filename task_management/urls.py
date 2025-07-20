@@ -16,12 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from tasks.views import Home,Contact
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('Home/', Home)  # This maps the URL '/Home/' to the Home view.
-    path('', Home),  # This sets the Home view as the default page when visiting the root URL.
-    path('Contact/', Contact),
+    # path('', Home),  # This sets the Home view as the default page when visiting the root URL.
+    # path('Contact/', Contact),
     path('tasks/', include("tasks.urls"))
 ]

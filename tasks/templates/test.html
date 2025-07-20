@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1 class="lal-bg">Test</h1>
+    <img src="{% static 'images/images.jpg' %}" alt=""> 
+    {% for nm in name %}
+    {% if not nm == 'keshob' %}
+    <p>{{nm}}</p>
+    {% elif nm == 'keshob' %}
+    <p class="lal-bg">{{nm}}</p>
+    {% endif %}
+    {% endfor %}
+    <p class="lal-bg">{{age}}</p>
+</body>
+</html>
